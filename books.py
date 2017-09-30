@@ -6,3 +6,7 @@ class Book:
 
 def list_books(repository):
     return repository.list_books()
+
+
+def add_book(book, repository):
+    repository.add_book(book)
