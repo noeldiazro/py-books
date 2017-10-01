@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add new book</title>
-</head>
-<body>
-    <h1>Add a new book</h1>
+{% extends "base.html" %}
+{% block title %}Add a new book{% endblock %}
+{% block content %}
     <form method="post">
         <div>
             <label for="isbn_13">ISBN-13</label>
@@ -17,7 +12,7 @@
         </div>
         <div>
             <button type="submit">Add</button>
+            <button type="reset">Reset</button>
         </div>
     </form>
-</body>
-</html>
+{% endblock %}

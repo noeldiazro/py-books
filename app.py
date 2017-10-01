@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     books = list_books(Repository('books.csv'))
-    return render_template('books.html', books=books)
+    return render_template('books.html', books=books, title='Books')
 
 
 @app.route('/book', methods=['GET', 'POST'])
@@ -17,7 +17,7 @@ def create_book():
                  Repository('books.csv'))
         return redirect(url_for('home'))
     else:
-        return render_template('book.html')
+        return render_template('book.html', title='Add a new book')
 
 
 if __name__ == '__main__':

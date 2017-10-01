@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello from Flask</title>
-</head>
-<body>
-    <h1>Books</h1>
-    <ul>
+{% extends "base.html" %}
+{% block title %}Books{% endblock %}
+{% block content %}
+    <ul class="list-unstyled">
         {% for book in books %}
         <li>{{ book.title }}</li>
         {% endfor %}
     </ul>
     <a href="/book">Add book</a>
-</body>
-</html>
+{% endblock %}
